@@ -1,6 +1,17 @@
-public class Flight {
+public class Flight{
 
-    public static void main(String [] args){
-        System.out.println("kennedy flight system");
+    int passangers;
+    int seats;
+
+    Flight() {
+        passangers = 0;
+        seats = 150;
+    }
+
+    void add1Passanger(){
+        if(passangers < seats)
+            passangers += 1;
+
     }
 }
+
