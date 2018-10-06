@@ -1,17 +1,36 @@
 public class Flight{
 
-    int passangers;
-    int seats;
+    private int passangers;
+    private int seats;
 
-    Flight() {
+    public Flight() {
         passangers = 0;
         seats = 150;
     }
 
-    void add1Passanger(){
+    public boolean hasRoom(Flight f2){
+        int total = passangers + f2.passangers;
+        return total <= seats;
+    }
+
+    public  Flight createNewWithBoth(Flight f2){
+        Flight newFlight = new Flight();
+        newFlight.seats = seats;
+        newFlight.passangers = passangers + f2.passangers;
+        return newFlight;
+    }
+
+    public void add1Passanger(){
         if(passangers < seats)
             passangers += 1;
 
+        else
+            handleTooMany();
+
+    }
+
+    private void handleTooMany(){
+        System.out.println("Too many");
     }
 }
 

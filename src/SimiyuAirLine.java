@@ -12,7 +12,15 @@ public class SimiyuAirLine {
         Flight mumiasToBGM = new Flight();
         mumiasToBGM.add1Passanger();
 
-        System.out.println(mumiasToBGM.passangers);
+        // System.out.println(mumiasToBGM.passangers);
+
+        Flight BGM1 = new Flight();
+        Flight BGM2 = new Flight();
+
+        Flight BGM3 = new Flight();
+        if(BGM1.hasRoom(BGM2))
+            BGM3 =
+                    BGM1.createNewWithBoth(BGM2);
 
     }
 
